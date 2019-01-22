@@ -19,6 +19,38 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: presentations
+    label: Presentation
+    folder: src/presentations
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string, tagname: ""}
+
+      - label: Theme
+        name: theme
+        widget: select
+        options:
+          - beige
+          - black
+          - blood
+          - league
+          - moon
+          - night
+          - serif
+          - simple
+          - sky
+          - solarized
+          - white
+
+      - label: Color
+        name: Color
+
+      - label: Body
+        name: body
+        widget: slides
+        separator: "\n\n<!--s-->\n\n"
+
   - name: "pages"
     label: "Pages"
     files:
